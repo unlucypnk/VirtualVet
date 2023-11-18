@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Button, Divider, Typography } from "@mui/material";
+import { Button, Divider, Link, Typography } from "@mui/material";
 import classes from "./registerForm.module.css";
 import FormInput from "../input/input.jsx";
 import Google from "../../logo/Google.jsx";
@@ -45,7 +45,7 @@ const RegisterForm = () => {
   return (
     <Fragment>
       <div className={classes.wrapper}>
-        <form onClick={handleSubmit}>
+        <form>
           <Typography className={classes.header}>SIGN UP</Typography>
           <Typography className={classes.details}>
             Please provide your details.
@@ -78,7 +78,7 @@ const RegisterForm = () => {
                 alignItems: "center",
               }}
             >
-            OR
+              OR
             </Typography>
           </Divider>
           {inputs.map((input) => (
@@ -98,14 +98,15 @@ const RegisterForm = () => {
           <div className={classes.buttons}>
             <Button
               className={classes.buttonsLogin}
-              type="button"
+              type="submit"
               variant="contained"
+              onClick={handleSubmit}
             >
               SIGN UP
             </Button>
           </div>
           <div className={classes.signUpText}>
-            <Typography>Already have an account ? Sign In</Typography>
+            <Link href="/login">Already have an account ? Sign In</Link>
           </div>
         </form>
       </div>

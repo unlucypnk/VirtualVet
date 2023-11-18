@@ -16,7 +16,14 @@ body {
 .logo {
   z-index: 1;
   position: absolute;
-  margin-top: 250px;
+  margin-top: 30vh;
+  margin-left: 3vw;
+  transition: all 0.2s ease-in-out;
+}
+
+.logo :hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .github {
@@ -24,6 +31,10 @@ body {
   position: absolute;
   margin-top: 650px;
   margin-left: 115px;
+}
+
+.github :hover {
+  cursor: pointer;
 }
 
 .wave {

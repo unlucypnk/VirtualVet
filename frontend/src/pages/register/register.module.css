@@ -16,7 +16,8 @@ body {
 .logo {
   z-index: 1;
   position: absolute;
-  margin-top: 250px;
+  margin-top: 30vh;
+  margin-left: 3vw;
   transition: all 0.2s ease-in-out;
 }
 
@@ -54,7 +55,7 @@ body {
   opacity: 0.5;
 }
 
-.loginForm {
+.registerForm {
   display: flex;
   align-items: center;
   align-content: center;

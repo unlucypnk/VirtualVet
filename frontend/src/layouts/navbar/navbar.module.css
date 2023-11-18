@@ -1,0 +1,28 @@
+:root {
+  --primary-blue: #4887c7;
+}
+
+.navbar {
+  background-color: var(--primary-blue) !important;
+}
+
+.icon {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #ffff;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.accountBTN {
+  margin-right: 15px !important;
+}
+
+.logo {
+  transition: all 0.2s ease-in-out;
+}
+
+.logo :hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

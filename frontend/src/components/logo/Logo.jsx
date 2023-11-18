@@ -1,16 +1,16 @@
 import React, { Fragment } from "react";
 import { Box } from "@mui/system";
 
-const Logo = () => {
+const Logo = (props) => {
   return (
     <Fragment>
       <Box
         component="img"
         sx={{
-          height: 267,
-          width: 350,
-          maxHeight: { xs: 333, md: 267 },
-          maxWidth: { xs: 450, md: 350 },
+          height: props.height,
+          width: props.width,
+          maxHeight: { xs: props.maxHeightXS, md: props.maxHeightMD },
+          maxWidth: { xs: props.maxWidthXS, md: props.maxWidthMD },
         }}
         alt="A cat's paw."
         src="./assets/SVG/logo2.svg"

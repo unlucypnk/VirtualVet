@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Button, Typography } from "@mui/material";
+import { Button, Link, Typography } from "@mui/material";
 import classes from "./loginForm.module.css";
 import FormInput from "../input/input.jsx";
 import Google from "../../logo/Google.jsx";
@@ -35,10 +35,12 @@ const LoginForm = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
+  console.log(values);
+
   return (
     <Fragment>
       <div className={classes.wrapper}>
-        <form onClick={handleSubmit}>
+        <form>
           <Typography className={classes.header}>SIGN IN</Typography>
           <Typography className={classes.details}>
             Please enter your details.
@@ -73,8 +75,9 @@ const LoginForm = () => {
           <div className={classes.buttons}>
             <Button
               className={classes.buttonsLogin}
-              type="button"
+              type="submit"
               variant="contained"
+              onClick={handleSubmit}
             >
               SIGN IN
             </Button>
@@ -88,7 +91,7 @@ const LoginForm = () => {
             </Button>
           </div>
           <div className={classes.signUpText}>
-            <Typography>Don't have an account ? Sign Up</Typography>
+            <Link href="/register">Don't have an account ? Sign Up</Link>
           </div>
         </form>
       </div>
