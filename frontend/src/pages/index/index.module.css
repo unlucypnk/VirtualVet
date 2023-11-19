@@ -3,21 +3,13 @@
   --bg-color: #efeff1;
 }
 
+* {
+  overflow: visible !important;
+}
+
 /*bg-color*/
 body {
   background-color: var(--bg-color);
-}
-
-.navbar {
-  z-index: 0;
-}
-
-.header {
-  z-index: 1;
-}
-
-.banner {
-  z-index: 2;
 }
 
 /*media query responsive resolutions*/

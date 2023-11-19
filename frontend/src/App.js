@@ -1,4 +1,3 @@
-import "./App.css";
 import { useState, useEffect, Fragment } from "react";
 import { getTest } from "./functions/test.jsx";
 import {
