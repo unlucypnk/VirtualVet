@@ -2,8 +2,16 @@
   --primary-blue: #4887c7;
 }
 
+.container {
+  overflow: hidden !important;
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+}
+
 .navbar {
   background-color: var(--primary-blue) !important;
+  position: fixed !important;
 }
 
 .icon {
@@ -23,6 +31,6 @@
 }
 
 .logo :hover {
-  cursor: pointer;
-  transform: scale(1.1);
+  cursor: pointer !important;
+  transform: scale(1.1) !important;
 }
