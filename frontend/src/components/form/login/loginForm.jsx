@@ -35,8 +35,6 @@ const LoginForm = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  console.log(values);
-
   return (
     <Fragment>
       <div className={classes.wrapper}>

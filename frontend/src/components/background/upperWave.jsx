@@ -1,14 +1,9 @@
 import React, { Fragment } from "react";
-import classes from "./upperWave";
 
 const UpperWave = () => {
   return (
     <Fragment>
-      <svg
-        className={classes.svg}
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#4887c7"
           fill-opacity="1"
