@@ -40,11 +40,40 @@ video {
   mix-blend-mode: overlay;
 }
 
+.details {
+  margin-top: 20%;
+}
+
 .text {
   z-index: 1;
   font-size: larger;
   color: black;
   margin-left: 20%;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 30em;
+  margin-left: 20%;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+
+.loginBtn {
+  background-color: #4887c7 !important;
+  border-radius: 10px !important;
+  font-size: large !important;
+  font-weight: normal;
+}
+
+.desktopBtn {
+  background-color: #4887c7 !important;
+  border-radius: 10px !important;
+  font-size: large !important;
+  font-weight: normal;
 }
 
 /*media query responsive resolutions*/

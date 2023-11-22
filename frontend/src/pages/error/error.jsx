@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
-const error = () => {
+const ErrorPage = () => {
   return (
-    <div>error</div>
+    <Fragment>
+      
+    </Fragment>
   )
 }
 
-export default error
+export default ErrorPage

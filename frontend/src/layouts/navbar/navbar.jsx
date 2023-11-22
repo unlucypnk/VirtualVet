@@ -14,6 +14,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Fragment } from "react";
 import Logo from "../../components/logo/Logo";
+import UpperWave from "../../components/background/upperWave";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -96,7 +97,9 @@ export default function Navbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <a href="/dashboard">Dashboard</a>
+      </MenuItem>
       <MenuItem onClick={handleMenuClose}>Log out</MenuItem>
     </Menu>
   );
@@ -118,7 +121,9 @@ export default function Navbar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <a href="/dashboard">Dashboard</a>
+      </MenuItem>
       <MenuItem onClick={handleMenuClose}>Log out</MenuItem>
     </Menu>
   );
@@ -196,6 +201,9 @@ export default function Navbar() {
           {renderMobileMenu}
           {renderMenu}
         </Box>
+        <div className={classes.wave}>
+          <UpperWave />
+        </div>
       </div>
     </Fragment>
   );

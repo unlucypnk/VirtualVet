@@ -32,7 +32,7 @@ export default function ServiceGrid() {
           <Item className={classes.item}>Productivity features</Item>
         </Grid>
         <Grid className={classes.item_grid} item xs={6}>
-          <Item className={classes.item}>Access anytime & anywhere</Item>
+          <Item className={classes.item}>Access anytime, anywhere</Item>
         </Grid>
       </Grid>
     </Box>
