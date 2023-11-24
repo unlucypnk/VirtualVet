@@ -3,6 +3,7 @@ import classes from "./navbar.module.css";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -97,6 +98,25 @@ export default function Navbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
+      <MenuItem
+        id="menu-appbar"
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "left",
+        }}
+        keepMounted
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "left",
+        }}
+        sx={{
+          display: { xs: "block", md: "none" },
+        }}
+      >
+        <MenuItem>
+          <Typography textAlign="center"></Typography>
+        </MenuItem>
+      </MenuItem>
       <MenuItem onClick={handleMenuClose}>
         <a href="/dashboard">Dashboard</a>
       </MenuItem>
@@ -134,15 +154,17 @@ export default function Navbar() {
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static" elevation={0} className={classes.navbar}>
             <Toolbar>
-              <Logo
-                className={classes.logo}
-                width="125px"
-                maxWidthXS="none"
-                maxWidthMD="125px"
-                height="125px"
-                maxHeightXS="none"
-                maxHeightMD="125px"
-              />
+              <a href="/">
+                <Logo
+                  className={classes.logo}
+                  width="125px"
+                  maxWidthXS="none"
+                  maxWidthMD="125px"
+                  height="125px"
+                  maxHeightXS="none"
+                  maxHeightMD="125px"
+                />
+              </a>
               <Typography
                 variant="h6"
                 noWrap
@@ -169,10 +191,50 @@ export default function Navbar() {
                   inputProps={{ "aria-label": "search" }}
                 />
               </Search>
+                <Box
+                  sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+                  className={classes.menuBtns}
+                >
+                  <Button
+                    sx={{ my: 2, color: "white", display: "block" }}
+                    className={classes.menuBtn}
+                    role="link"
+                    href="/clients"
+                  >
+                    Clients
+                  </Button>
+                  <Button
+                    sx={{ my: 2, color: "white", display: "block" }}
+                    className={classes.menuBtn}
+                    role="link"
+                    href="/appointments"
+                  >
+                    Appointments
+                  </Button>
+                  <Button
+                    className={classes.menuBtn}
+                    sx={{
+                      my: 2,
+                      color: "white",
+                      display: "block",
+                    }}
+                    role="link"
+                    href="/inventory"
+                  >
+                    Inventory
+                  </Button>
+                  <Button
+                    sx={{ my: 2, color: "white", display: "block" }}
+                    className={classes.menuBtn}
+                    role="link"
+                    href="/space"
+                  >
+                    My Space
+                  </Button>
+                </Box>
               <Box sx={{ flexGrow: 1 }} />
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 <IconButton
-                  size="large"
                   edge="end"
                   aria-label="account of current user"
                   aria-controls={menuId}

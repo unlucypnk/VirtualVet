@@ -63,6 +63,7 @@ video {
 }
 
 .loginBtn {
+  color: white !important;
   background-color: #4887c7 !important;
   border-radius: 10px !important;
   font-size: large !important;

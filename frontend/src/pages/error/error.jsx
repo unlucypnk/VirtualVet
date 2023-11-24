@@ -1,11 +1,7 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
 const ErrorPage = () => {
-  return (
-    <Fragment>
-      
-    </Fragment>
-  )
-}
+  return <Fragment>ERROR</Fragment>;
+};
 
-export default ErrorPage
+export default ErrorPage;

@@ -26,6 +26,8 @@ const index = () => {
               className={classes.loginBtn}
               type="button"
               variant="contained"
+              role="link"
+              href="/login"
               startIcon={<AccountCircleIcon />}
             >
               Log in
