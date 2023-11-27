@@ -8,6 +8,7 @@ const LoginForm = () => {
   const [values, setValues] = useState({
     Email: "",
     Password: "",
+    errorMessage: "",
   });
 
   const inputs = [
@@ -17,13 +18,19 @@ const LoginForm = () => {
       label: "Email Address",
       type: "email",
       placeholder: "JohnSmith@gmail.com",
+      errorMessage: "",
+      pattern: "",
+      required: true,
     },
     {
       id: 2,
       name: "Password",
       label: "Password",
-      type: "password",
+      type: "text",
       placeholder: "Password",
+      errorMessage: "",
+      pattern: ``,
+      required: true,
     },
   ];
 
@@ -54,6 +61,7 @@ const LoginForm = () => {
                 type={input.type}
                 value={values[input.name]}
                 onChange={onChange}
+                errorMessage={input.errorMessage}
               />
             </div>
           ))}

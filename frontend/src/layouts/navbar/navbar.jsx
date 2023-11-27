@@ -229,7 +229,7 @@ export default function Navbar() {
                     role="link"
                     href="/space"
                   >
-                    My Space
+                    Tools
                   </Button>
                 </Box>
               <Box sx={{ flexGrow: 1 }} />

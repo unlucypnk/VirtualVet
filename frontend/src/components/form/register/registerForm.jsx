@@ -8,6 +8,7 @@ const RegisterForm = () => {
   const [values, setValues] = useState({
     Email: "",
     Password: "",
+    errorMessage: "",
   });
 
   const inputs = [
@@ -17,13 +18,21 @@ const RegisterForm = () => {
       label: "Email Address",
       type: "email",
       placeholder: "JohnSmith@gmail.com",
+      errorMessage: "Invalid email !",
+      pattern:
+        '/^(([^<>()[].,;:s@"]+(.[^<>()[].,;:s@"]+)*)|(".+"))@(([^<>()[].,;:s@"]+.)+[^<>()[].,;:s@"]{2,})$/i;',
+      required: true,
     },
     {
       id: 2,
       name: "Password",
       label: "Password",
-      type: "password",
+      type: "text",
       placeholder: "Password",
+      errorMessage:
+        "Password must contain minimum eight characters, at least one letter, one number and one special character !",
+      pattern: `^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$`,
+      required: true,
     },
     {
       id: 3,
@@ -31,6 +40,9 @@ const RegisterForm = () => {
       label: "Repeat Password",
       type: "password",
       placeholder: "Repeat Password",
+      errorMessage: "Passwords don't match !",
+      pattern: values.Password,
+      required: true,
     },
   ];
 
@@ -92,6 +104,7 @@ const RegisterForm = () => {
                 type={input.type}
                 value={values[input.name]}
                 onChange={onChange}
+                errorMessage={input.errorMessage}
               />
             </div>
           ))}

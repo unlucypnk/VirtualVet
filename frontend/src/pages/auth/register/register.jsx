@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import classes from "./register.module.css";
-import Logo from "../../components/logo/Logo";
-import Github from "../../components/logo/git/Git";
-import Wave from "../../components/background/sideWave";
-import Paws from "../../components/background/paws";
-import Cat from "../../components/background/cat";
-import RegisterForm from "../../components/form/register/registerForm";
+import Logo from "../../../components/logo/Logo";
+import Github from "../../../components/logo/git/Git";
+import Wave from "../../../components/background/sideWave";
+import Paws from "../../../components/background/paws";
+import Cat from "../../../components/background/cat";
+import RegisterForm from "../../../components/form/register/registerForm";
 
 const Register = () => {
   return (
